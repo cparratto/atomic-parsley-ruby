@@ -12,6 +12,12 @@ end
 ## Installation
 
 Add this line to your application's Gemfile:
+    OSX
+        brew install AtomicParsley
+    Ubuntu
+        sudo apt-get install AtomicParsley
+    Windows
+        install Linux
 
     gem 'atomic-parsley-ruby'
 
