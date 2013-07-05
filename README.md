@@ -1,6 +1,13 @@
-# Atomic::Parsley::Ruby
+# AtomicParsleyRuby
 
-TODO: Write a gem description
+v = AtomicParsleyRuby::Media.new("test.mp4")
+
+v.encode do |config|
+    config.artist "Some Guy"
+    config.year "2012"
+    config.genre "Punk Rock"
+    config.artwork "cover.png"
+end
 
 ## Installation
 
