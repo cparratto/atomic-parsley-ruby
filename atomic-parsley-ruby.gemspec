@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["cparratto"]
   spec.email         = ["cparratto@pnmac.com"]
   spec.description   = %q{A wrapper api for the atomic-parsley cli}
-  spec.summary       = %q{I tak not major credit for this its simpley just a rapper for the c application available at http://atomicparsley.sourceforge.net/}
+  spec.summary       = %q{I take no major credit for this its simply just a wrapper for the c application available at http://atomicparsley.sourceforge.net/}
   spec.homepage      = "https://github.com/cparratto/atomic-parsley-ruby"
   spec.license       = "MIT"
 

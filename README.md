@@ -1,23 +1,17 @@
 # AtomicParsleyRuby
 
-v = AtomicParsleyRuby::Media.new("test.mp4")
-
-v.encode do |config|
-    config.artist "Some Guy"
-    config.year "2012"
-    config.genre "Punk Rock"
-    config.artwork "cover.png"
-end
+A wrapper api for the atomic-parsley cli...
 
 ## Installation
 
-Add this line to your application's Gemfile:
     OSX
         brew install AtomicParsley
     Ubuntu
         sudo apt-get install AtomicParsley
     Windows
         install Linux
+
+Add this line to your application's Gemfile:
 
     gem 'atomic-parsley-ruby'
 
@@ -31,7 +25,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    v = AtomicParsleyRuby::Media.new("test.mp4")
+
+    v.encode do |config|
+        config.artist "Some Guy"
+        config.year "2012"
+        config.genre "Punk Rock"
+        config.artwork "cover.png"
+    end
 
 ## Contributing
 
