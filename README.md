@@ -1,6 +1,6 @@
 # AtomicParsleyRuby
 
-A wrapper api for the atomicparsley cli. This is good for scripting out bulk media meta encodeing. It has been tested on mp3, mp4, and m4v
+A wrapper api for the atomicparsley cli. Made for scripting out bulk media meta encodings in ruby. It has been tested on mp3, mp4, and m4v.
 
 ## Installation
 
