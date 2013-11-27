@@ -55,7 +55,7 @@ module AtomicParsleyRuby
      :composer, :copyrights,
      :grouping, :artwork, :bpm, :description,
      :albumArtist, :compilation, :hdvideo,
-     :advisory, :stick, :desctiption,
+     :advisory, :stik, :desctiption,
      :longdesc, :TVNetwork, :TVShowName,
      :TVEpisode, :TVSeasonNum, :TVEpisodeNum,
      :podcastFlag, :category, :keyword,
