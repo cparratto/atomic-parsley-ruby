@@ -5,9 +5,14 @@ module AtomicParsleyRuby
 
     def initialize(file_name)
       @file =  ::Shellwords.escape(file_name)
+      @overwrite = false
       @params = {}
     end
-
+    
+    def overwrite(val)
+      @overwrite = val
+    end
+    
     #  --artist       (string)     Set the artist tag\n"
     #  --title        (string)     Set the title tag\n"
     #  --album        (string)     Set the album tag\n"
@@ -47,8 +52,7 @@ module AtomicParsleyRuby
     #  --xid          (string)     Set the vendor-supplied iTunes xID (see --longhelp)\n"
     #  --gapless      (boolean)    Set the gapless playback flag\n"
     #  --contentRating (string*)   Set tv/mpaa rating (see -rDNS-help)\n"
-
-
+    
     [:artist, :title, :album,
      :genre, :tracknum, :disk,
      :comment, :year, :lyrics,
@@ -91,6 +95,9 @@ module AtomicParsleyRuby
       unless @params.empty?
         ret << " #{@file}"
         @params.each {|flag, arg| ret << " #{flag} #{arg}"}
+        if @overwrite
+          ret << " --overWrite"
+        end
       end
       ret
     end

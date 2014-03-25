@@ -64,6 +64,7 @@ Or install it yourself as:
     #  xid          (string)     Set the vendor-supplied iTunes xID (see --longhelp)
     #  gapless      (boolean)    Set the gapless playback flag
     #  contentRating (string)   Set tv/mpaa rating (see -rDNS-help)
+    #  overwrite    (boolean)    Overwrite media file, instead of create a temp file (true, false) (default: false)
 
     v = AtomicParsleyRuby::Media.new("test.mp4")
 
