@@ -4,7 +4,7 @@ module AtomicParsleyRuby
   describe Dependency do
      it "raises an exception when AtomicParsley in not in your path" do
       Dependency.stubs("which").with("AtomicParsley").returns("/usr/bin/AtomicParsley")
-      Dependency.path.should eq "/usr/bin/AtomicParsley"
+      expect(Dependency.path).to eq "/usr/bin/AtomicParsley"
      end
 
      it "returns the path when AtomicParsley is in your path" do

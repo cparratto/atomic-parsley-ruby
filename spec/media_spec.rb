@@ -20,7 +20,7 @@ module AtomicParsleyRuby
         ::AtomicParsleyRuby::Dependency.stubs(:path).returns("AtomicParsley")
         v = Media.new("test.mp4")
         v.send(flag, "test-value")
-        v.cmd.should eq "AtomicParsley test.mp4 --#{flag.to_s} test-value"
+        expect(v.cmd).to eq "AtomicParsley test.mp4 --#{flag.to_s} test-value"
       end
     end
 
@@ -33,7 +33,7 @@ module AtomicParsleyRuby
         config.year "2012"
         config.genre "Punk Rock"
       end
-      v.cmd.should eq "AtomicParsley test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock"
+      expect(v.cmd).to eq "AtomicParsley test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock"
     end
 
   end
