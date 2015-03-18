@@ -24,6 +24,21 @@ module AtomicParsleyRuby
       end
     end
 
+    it "responds to overwrite true" do
+      ::AtomicParsleyRuby::Dependency.stubs(:path).returns("AtomicParsley")
+      v = Media.new("test.mp4")
+      v.send(:artist, "test-value")
+      v.overwrite true
+      v.cmd.should eq "AtomicParsley test.mp4 --artist test-value --overWrite"
+    end
+
+    it "responds to overwrite true only with other flags" do
+      ::AtomicParsleyRuby::Dependency.stubs(:path).returns("AtomicParsley")
+      v = Media.new("test.mp4")
+      v.overwrite true
+      v.cmd.should eq "AtomicParsley"
+    end
+
     it "sets multiple flags using the encode block" do
       ::AtomicParsleyRuby::Dependency.stubs(:path).returns("AtomicParsley")
       v = Media.new("test.mp4")
@@ -35,6 +50,5 @@ module AtomicParsleyRuby
       end
       expect(v.cmd).to eq "AtomicParsley test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock test.mp4 --artist Some\\ Guy --year 2012 --genre Punk\\ Rock"
     end
-
   end
 end
